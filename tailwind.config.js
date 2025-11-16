@@ -1,0 +1,77 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        // Emerald palette
+        emerald: {
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          200: "#bbf7d0",
+          300: "#86efac",
+          400: "#4ade80",
+          500: "#22c55e",
+          600: "#16a34a",
+          700: "#15803d",
+          800: "#166534",
+          900: "#134e4a",
+        },
+        // Blue palette
+        blue: {
+          50: "#f0f9ff",
+          100: "#e0f2fe",
+          200: "#bae6fd",
+          300: "#7dd3fc",
+          400: "#38bdf8",
+          500: "#0ea5e9",
+          600: "#0284c7",
+          700: "#0369a1",
+          800: "#075985",
+          900: "#0c4a6e",
+        },
+      },
+      spacing: {
+        "safe-area-inset-top": "env(safe-area-inset-top)",
+        "safe-area-inset-right": "env(safe-area-inset-right)",
+        "safe-area-inset-bottom": "env(safe-area-inset-bottom)",
+        "safe-area-inset-left": "env(safe-area-inset-left)",
+      },
+    },
+  },
+  corePlugins: {
+    // Disable utilities that MUI handles
+    spacing: false,
+    padding: false,
+    margin: false,
+    width: false,
+    height: false,
+    minHeight: false,
+    maxHeight: false,
+    minWidth: false,
+    maxWidth: false,
+    colors: false,
+    backgroundColor: false,
+    textColor: false,
+    borderColor: false,
+    fontSize: false,
+    fontWeight: false,
+    letterSpacing: false,
+    lineHeight: false,
+    // Keep utilities for layout
+    display: true,
+    flexDirection: true,
+    justifyContent: true,
+    alignItems: true,
+    flex: true,
+    flexGrow: true,
+    flexShrink: true,
+    gap: true,
+    gridTemplateColumns: true,
+    gridColumn: true,
+    gridTemplateRows: true,
+    gridRow: true,
+    order: true,
+  },
+  plugins: [],
+};
